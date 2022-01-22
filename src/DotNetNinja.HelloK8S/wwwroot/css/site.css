@@ -1,18 +1,32 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-image: url("/images/ContainerShip.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.welcome-title {
+    color: #ffffff;
+    text-shadow: 3px 3px 6px #000000;
+    font-size: 3em;
 }
