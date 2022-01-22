@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file ./src/DotNetNinja.HelloK8S/Dockerfile --tag HelloK8S:v2.0
+      run: docker build . --file ./src/DotNetNinja.HelloK8S/Dockerfile --tag hellok8s:v2.0
