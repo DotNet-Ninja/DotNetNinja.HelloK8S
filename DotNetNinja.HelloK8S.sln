@@ -1,19 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{527DA89C-EC81-4ECC-AF31-59D3156F621E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetNinja.HelloK8S", "src\DotNetNinja.HelloK8S\DotNetNinja.HelloK8S.csproj", "{41141A97-90E5-424B-AE8F-5EAC07C01C41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetNinja.HelloK8S", "src\DotNetNinja.HelloK8S\DotNetNinja.HelloK8S.csproj", "{41141A97-90E5-424B-AE8F-5EAC07C01C41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "actions", "actions", "{5895351B-7B4A-455F-A532-011171426C19}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\docker-image.yml = .github\workflows\docker-image.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{41141A97-90E5-424B-AE8F-5EAC07C01C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -21,7 +23,13 @@ Global
 		{41141A97-90E5-424B-AE8F-5EAC07C01C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41141A97-90E5-424B-AE8F-5EAC07C01C41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{41141A97-90E5-424B-AE8F-5EAC07C01C41} = {527DA89C-EC81-4ECC-AF31-59D3156F621E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B0627D5-9604-4BC5-948B-7A2ECE6565B9}
 	EndGlobalSection
 EndGlobal
