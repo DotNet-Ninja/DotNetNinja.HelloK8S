@@ -14,6 +14,8 @@ jobs:
     steps: 
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: ShowLocation
+        run: ls -al
       - name: ReadVersion
         run: echo "::set-output name=version::echo $(<.version)"
   build-and-push-docker-image:
