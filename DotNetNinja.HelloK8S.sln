@@ -9,6 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetNinja.HelloK8S", "src
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "actions", "actions", "{5895351B-7B4A-455F-A532-011171426C19}"
 	ProjectSection(SolutionItems) = preProject
+		.github\workflows\docker-build-publish.yaml = .github\workflows\docker-build-publish.yaml
 		.github\workflows\docker-image.yml = .github\workflows\docker-image.yml
 	EndProjectSection
 EndProject
