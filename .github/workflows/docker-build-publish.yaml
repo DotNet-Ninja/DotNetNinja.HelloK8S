@@ -14,8 +14,8 @@ jobs:
     steps: 
       - id: Checkout code
         uses: actions/checkout@v2
-      - name: SetValue
-        id: |
+      - id: SetValue
+        run: |
           echo "Set value"
           value=$(<.semver)
           echo $value
