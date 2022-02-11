@@ -6,6 +6,11 @@ on:
   pull_request:
 
 jobs:
+  semantic-version:
+    runs-on: ubuntu-latest
+    name: Pull semantic version from sem.ver file
+    outputs:
+      version: ${{echo $(<.semver)}}
   build-and-push-docker-image:
     name: Build Docker image and push to repositories
     runs-on: ubuntu-latest
@@ -26,7 +31,7 @@ jobs:
         with:
           context: ./src/DotNetNinja.HelloK8S
           tags: |
-            dotnetninjax/hellok8s:v1.0 
+            dotnetninjax/hellok8s:${{needs.sematic-version.outputs.version}} 
           push: ${{ github.ref == 'refs/heads/main' }} # Only push if on main branch
 
       - name: Image digest
