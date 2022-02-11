@@ -7,9 +7,9 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["src/DotNetNinja.HelloK8S/DotNetNinja.HelloK8S.csproj", "src/DotNetNinja.HelloK8S/"]
+COPY ["DotNetNinja.HelloK8S.csproj", "src/DotNetNinja.HelloK8S/"]
 RUN dotnet restore "src/DotNetNinja.HelloK8S/DotNetNinja.HelloK8S.csproj"
-COPY . .
+COPY . "src/DotNetNinja.HelloK8S/"
 WORKDIR "/src/src/DotNetNinja.HelloK8S"
 RUN dotnet build "DotNetNinja.HelloK8S.csproj" -c Release -o /app/build
 
