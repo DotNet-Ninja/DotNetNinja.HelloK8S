@@ -10,7 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     name: Pull semantic version from sem.ver file
     outputs:
-      version: ${{echo $(<.semver)}}
+      version: ${{step.ReadVersion.outputs.version}}
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: ReadVersion
+        run: echo "::set-output name=version::echo $(<.version)"
   build-and-push-docker-image:
     name: Build Docker image and push to repositories
     runs-on: ubuntu-latest
