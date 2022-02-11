@@ -20,7 +20,7 @@ jobs:
           value=$(<.semver)
           echo $value
           echo "Set output"
-          echo "::set-output name=SetValue::$value"
+          echo "::set-output name=result::$value"
           echo "result"
           echo ${{ steps.SetValue.outputs.result }}
           echo "Done"
