@@ -12,7 +12,7 @@ jobs:
     outputs:
       version: ${{ steps.SetValue.outputs.result }}
     steps: 
-      - id: Checkout code
+      - id: CheckoutCode
         uses: actions/checkout@v2
       - id: SetValue
         run: |
