@@ -15,9 +15,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Capture version
-        run: value = $(<.semver)
-      - name: Show version
         run: value=$(<.semver)
+      - name: Show version
+        run: echo $value
       - name: SetVersion
         run: echo "::set-output name=version::$value"
   build-and-push-docker-image:
