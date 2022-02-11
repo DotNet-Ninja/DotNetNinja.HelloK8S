@@ -15,7 +15,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: SetVersion
-        run: echo "::set-output name=version::$(<.semver)"
+        run: echo "::set-output name=version::echo $(<.semver)"
   build-and-push-docker-image:
     name: Build Docker image and push to repositories
     runs-on: ubuntu-latest
