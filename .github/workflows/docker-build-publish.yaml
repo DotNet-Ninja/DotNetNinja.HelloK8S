@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Pull semantic version from sem.ver file
     outputs:
-      version: ${{step.ReadVersion.outputs.version}}
+      version: ${{steps.ReadVersion.outputs.version}}
     steps: 
       - name: Checkout code
         uses: actions/checkout@v2
