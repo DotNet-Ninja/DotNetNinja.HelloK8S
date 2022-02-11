@@ -10,19 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     name: Pull semantic version from sem.ver file
     outputs:
-      version: ${{ steps.SetVersion.outputs.version }}
+      version: ${{ steps.SetValue.outputs.result }}
     steps: 
-      - name: Checkout code
+      - id: Checkout code
         uses: actions/checkout@v2
-      - name: SetVersion
-        run: |
+      - name: SetValue
+        id: |
           echo "Set value"
           value=$(<.semver)
           echo $value
           echo "Set output"
-          echo "::set-output name=version::$value"
+          echo "::set-output name=SetValue::$value"
           echo "result"
-          echo ${{ steps.SetVersion.outputs.version }}
+          echo ${{ steps.SetValue.outputs.result }}
           echo "Done"
   test:
     runs-on: ubuntu-latest
