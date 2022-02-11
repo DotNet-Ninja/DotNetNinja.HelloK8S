@@ -17,6 +17,7 @@ jobs:
       - name: SetVersion
         run: |
           value=$(<.semver)
+          echo $value
           echo "::set-output name=version::$value"
   test:
     runs-on: ubuntu-latest
