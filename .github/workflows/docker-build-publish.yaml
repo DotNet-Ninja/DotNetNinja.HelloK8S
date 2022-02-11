@@ -17,7 +17,7 @@ jobs:
       - name: Capture version
         run: value = $(<.semver)
       - name: Show version
-        run: value = $(<.semver)
+        run: value=$(<.semver)
       - name: SetVersion
         run: echo "::set-output name=version::$value"
   build-and-push-docker-image:
