@@ -16,6 +16,13 @@ jobs:
         uses: actions/checkout@v2
       - name: SetVersion
         run: echo "::set-output name=version::$(<.semver)"
+  test:
+    runs-on: ubuntu-latest
+    name: Pull semantic version from sem.ver file
+    needs: semantic-version
+    steps:
+      - name: echo
+        run: echo ${{needs.sematic-version.outputs.version}}
   build-and-push-docker-image:
     name: Build Docker image and push to repositories
     runs-on: ubuntu-latest
