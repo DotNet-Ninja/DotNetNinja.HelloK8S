@@ -26,7 +26,7 @@ jobs:
         with:
           context: ./src/DotNetNinja.HelloK8S
           tags: |
-            dotnetninjax/hellok8s:latest 
+            dotnetninjax/hellok8s:v1.0 
           push: ${{ github.ref == 'refs/heads/main' }} # Only push if on main branch
 
       - name: Image digest
