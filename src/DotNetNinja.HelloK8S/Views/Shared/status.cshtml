@@ -1,0 +1,20 @@
+@model HttpStatusModel
+@{
+    ViewData["Title"] = $"Status: {Model.StatusCode} - {Model.Description}";
+}
+<div class="text-center">
+    <h1 class="welcome-title text-@Model.StatusClass">
+        Status: @Model.StatusCode
+    </h1>
+    <h2 class="welcome-title text-@Model.StatusClass">@Model.Description</h2>
+</div>
+<div class="row">
+    <div class="col-md-12 masked">
+        <ul>
+            @foreach(var key in UIHelper.UIAllowedStatusCodes)
+            {
+                <li><a asp-controller="HttpStatus" asp-action="@key">Status: @((int)key) - @UIHelper.HttpStatusDescriptions[key]</a></li>
+            }
+        </ul>
+    </div>
+</div>

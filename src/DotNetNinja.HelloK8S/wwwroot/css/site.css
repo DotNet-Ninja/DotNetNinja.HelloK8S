@@ -30,3 +30,14 @@ footer {
     text-shadow: 3px 3px 6px #000000;
     font-size: 3em;
 }
+
+.masked{
+    border: solid 1px #000000;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.masked li{
+    padding: 2px;
+}
